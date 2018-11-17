@@ -117,6 +117,8 @@ type RTCPeerConnection struct {
 
 	// Deprecated: Internal mechanism which will be removed.
 	networkManager *network.Manager
+
+	backgroundActions chan func()
 }
 
 // New creates a new RTCPeerConfiguration with the provided configuration
@@ -145,6 +147,7 @@ func New(configuration RTCConfiguration) (*RTCPeerConnection, error) {
 		mediaEngine:        DefaultMediaEngine,
 		sctpTransport:      newRTCSctpTransport(),
 		dataChannels:       make(map[uint16]*RTCDataChannel),
+		backgroundActions:  make(chan func(), 1),
 	}
 
 	var err error
@@ -171,6 +174,12 @@ func New(configuration RTCConfiguration) (*RTCPeerConnection, error) {
 			}
 		}
 	}
+
+	go func() {
+		for action := range pc.backgroundActions {
+			action()
+		}
+	}()
 
 	return &pc, nil
 }
@@ -744,6 +753,8 @@ func (pc *RTCPeerConnection) Close() error {
 		return nil
 	}
 
+	close(pc.backgroundActions)
+
 	pc.networkManager.Close()
 
 	// https://www.w3.org/TR/webrtc/#dom-rtcpeerconnection-close (step #3)
@@ -818,12 +829,12 @@ func (pc *RTCPeerConnection) dataChannelEventHandler(e network.DataChannelEvent)
 		newDataChannel := &RTCDataChannel{ID: &id, Label: event.Label, rtcPeerConnection: pc, ReadyState: RTCDataChannelStateOpen}
 		pc.dataChannels[e.StreamIdentifier()] = newDataChannel
 		if pc.OnDataChannel != nil {
-			go func() {
+			pc.backgroundActions <- func() {
 				pc.OnDataChannel(newDataChannel) // This should actually be called when processing the SDP answer.
 				if newDataChannel.OnOpen != nil {
-					go newDataChannel.doOnOpen()
+					newDataChannel.doOnOpen()
 				}
-			}()
+			}
 		} else {
 			fmt.Println("OnDataChannel is unset, discarding message")
 		}
@@ -833,7 +844,7 @@ func (pc *RTCPeerConnection) dataChannelEventHandler(e network.DataChannelEvent)
 			defer datachannel.RUnlock()
 
 			if datachannel.Onmessage != nil {
-				go datachannel.Onmessage(event.Payload)
+				pc.backgroundActions <- func() { datachannel.Onmessage(event.Payload) }
 			} else {
 				fmt.Printf("Onmessage has not been set for Datachannel %s %d \n", datachannel.Label, e.StreamIdentifier())
 			}
@@ -853,7 +864,9 @@ func (pc *RTCPeerConnection) dataChannelEventHandler(e network.DataChannelEvent)
 			dc.ReadyState = RTCDataChannelStateOpen
 			dc.Unlock()
 
-			go dc.doOnOpen() // TODO: move to ChannelAck handling
+			pc.backgroundActions <- func() {
+				dc.doOnOpen() // TODO: move to ChannelAck handling
+			}
 		}
 	default:
 		fmt.Printf("Unhandled DataChannelEvent %v \n", event)

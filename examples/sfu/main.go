@@ -9,11 +9,11 @@ import (
 	"bufio"
 	"encoding/base64"
 
-	"github.com/pions/webrtc"
-	"github.com/pions/webrtc/pkg/media"
-	"github.com/pions/webrtc/pkg/media/samplebuilder"
-	"github.com/pions/webrtc/pkg/rtcp"
-	"github.com/pions/webrtc/pkg/rtp/codecs"
+	"github.com/tailvh/webrtc"
+	"github.com/tailvh/webrtc/pkg/media"
+	"github.com/tailvh/webrtc/pkg/media/samplebuilder"
+	"github.com/tailvh/webrtc/pkg/rtcp"
+	"github.com/tailvh/webrtc/pkg/rtp/codecs"
 )
 
 var peerConnectionConfig = webrtc.RTCConfiguration{

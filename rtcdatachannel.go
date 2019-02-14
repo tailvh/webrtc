@@ -3,8 +3,8 @@ package webrtc
 import (
 	"sync"
 
-	"github.com/pions/webrtc/pkg/datachannel"
-	"github.com/pions/webrtc/pkg/rtcerr"
+	"github.com/tailvh/webrtc/pkg/datachannel"
+	"github.com/tailvh/webrtc/pkg/rtcerr"
 )
 
 // RTCDataChannel represents a WebRTC DataChannel

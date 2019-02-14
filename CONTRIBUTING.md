@@ -2,4 +2,4 @@
   Contributing
 </h1>
 
-Moved to the **[contributing wiki](https://github.com/pions/webrtc/wiki/Contributing)**.
+Moved to the **[contributing wiki](https://github.com/tailvh/webrtc/wiki/Contributing)**.

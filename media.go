@@ -1,13 +1,13 @@
 package webrtc
 
 import (
-	"github.com/pions/webrtc/pkg/media"
-	"github.com/pions/webrtc/pkg/rtp"
+	"github.com/tailvh/webrtc/pkg/media"
+	"github.com/tailvh/webrtc/pkg/rtp"
 )
 
 // RTCSample contains media, and the amount of samples in it
 //
-// Deprecated: use RTCSample from github.com/pions/webrtc/pkg/media instead
+// Deprecated: use RTCSample from github.com/tailvh/webrtc/pkg/media instead
 type RTCSample = media.RTCSample
 
 // RTCTrack represents a track that is communicated

@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pions/webrtc/pkg/media"
-	"github.com/pions/webrtc/pkg/rtp"
+	"github.com/tailvh/webrtc/pkg/media"
+	"github.com/tailvh/webrtc/pkg/rtp"
 
-	"github.com/pions/webrtc/pkg/rtcerr"
 	"github.com/stretchr/testify/assert"
+	"github.com/tailvh/webrtc/pkg/rtcerr"
 )
 
 func TestNew(t *testing.T) {

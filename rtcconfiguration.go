@@ -1,7 +1,7 @@
 package webrtc
 
 import (
-	"github.com/pions/webrtc/pkg/ice"
+	"github.com/tailvh/webrtc/pkg/ice"
 )
 
 // RTCConfiguration defines a set of parameters to configure how the

@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/pions/webrtc"
-	"github.com/pions/webrtc/pkg/datachannel"
-	"github.com/pions/webrtc/pkg/ice"
+	"github.com/tailvh/webrtc"
+	"github.com/tailvh/webrtc/pkg/datachannel"
+	"github.com/tailvh/webrtc/pkg/ice"
 )
 
 func main() {

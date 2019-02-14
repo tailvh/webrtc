@@ -11,7 +11,7 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/pions/webrtc/pkg/rtcerr"
+	"github.com/tailvh/webrtc/pkg/rtcerr"
 )
 
 // RTCCertificate represents a x509Cert used to authenticate WebRTC communications.

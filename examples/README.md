@@ -16,8 +16,8 @@ All examples can be executed on your local machine.
 
 ### Install
 ``` sh
-go get github.com/pions/webrtc
-cd $GOPATH/src/github.com/pions/webrtc/examples
+go get github.com/tailvh/webrtc
+cd $GOPATH/src/github.com/tailvh/webrtc/examples
 go run examples.go
 ```
 Note: you can change the port of the server using the ``--address`` flag.

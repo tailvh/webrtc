@@ -3,7 +3,7 @@ package rtcp
 import (
 	"encoding/binary"
 
-	"github.com/pions/webrtc/internal/util"
+	"github.com/tailvh/webrtc/internal/util"
 )
 
 // SDESType is the item type used in the RTCP SDES control packet.

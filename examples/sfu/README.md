@@ -6,7 +6,7 @@ This could serve as the building block to building conferencing software, and ot
 ## Instructions
 ### Download sfu
 ```
-go get github.com/pions/webrtc/examples/sfu
+go get github.com/tailvh/webrtc/examples/sfu
 ```
 
 ### Open sfu example page
@@ -14,7 +14,7 @@ go get github.com/pions/webrtc/examples/sfu
 
 ### Run SFU
 #### Linux/macOS
-Run `sfu` OR run `main.go` in `github.com/pions/webrtc/examples/sfu`
+Run `sfu` OR run `main.go` in `github.com/tailvh/webrtc/examples/sfu`
 
 ### Start a publisher
 Click `Publish a Broadcast` and paste the SDP into your terminal. The `sfu` application will respond with an offer, paste this into the second input field. Then press `Start Session`

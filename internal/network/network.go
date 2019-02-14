@@ -1,9 +1,9 @@
 package network
 
 import (
-	"github.com/pions/webrtc/pkg/datachannel"
-	"github.com/pions/webrtc/pkg/ice"
-	"github.com/pions/webrtc/pkg/rtp"
+	"github.com/tailvh/webrtc/pkg/datachannel"
+	"github.com/tailvh/webrtc/pkg/ice"
+	"github.com/tailvh/webrtc/pkg/rtp"
 )
 
 // BufferTransportGenerator generates a new channel for the associated SSRC

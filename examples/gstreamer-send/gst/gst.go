@@ -12,8 +12,8 @@ import (
 	"sync"
 	"unsafe"
 
-	"github.com/pions/webrtc"
-	"github.com/pions/webrtc/pkg/media"
+	"github.com/tailvh/webrtc"
+	"github.com/tailvh/webrtc/pkg/media"
 )
 
 func init() {

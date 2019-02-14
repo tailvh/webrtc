@@ -3,9 +3,9 @@ package samplebuilder
 import (
 	"testing"
 
-	"github.com/pions/webrtc/pkg/media"
-	"github.com/pions/webrtc/pkg/rtp"
 	"github.com/stretchr/testify/assert"
+	"github.com/tailvh/webrtc/pkg/media"
+	"github.com/tailvh/webrtc/pkg/rtp"
 )
 
 type sampleBuilderTest struct {

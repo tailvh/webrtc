@@ -6,13 +6,13 @@
 </h1>
 <h4 align="center">A Golang implementation of the WebRTC API</h4>
 <p align="center">
-  <a href="https://sourcegraph.com/github.com/pions/webrtc?badge"><img src="https://sourcegraph.com/github.com/pions/webrtc/-/badge.svg" alt="Sourcegraph Widget"></a>
+  <a href="https://sourcegraph.com/github.com/tailvh/webrtc?badge"><img src="https://sourcegraph.com/github.com/tailvh/webrtc/-/badge.svg" alt="Sourcegraph Widget"></a>
   <a href="http://gophers.slack.com/messages/pion"><img src="https://img.shields.io/badge/join-us%20on%20slack-gray.svg?longCache=true&logo=slack&colorB=brightgreen" alt="Slack Widget"></a>
   <br>
-  <a href="https://travis-ci.org/pions/webrtc"><img src="https://travis-ci.org/pions/webrtc.svg?branch=master" alt="Build Status"></a>
-  <a href="https://godoc.org/github.com/pions/webrtc"><img src="https://godoc.org/github.com/pions/webrtc?status.svg" alt="GoDoc"></a>
-  <a href="https://coveralls.io/github/pions/webrtc"><img src="https://coveralls.io/repos/github/pions/webrtc/badge.svg" alt="Coverage Status"></a>
-  <a href="https://goreportcard.com/report/github.com/pions/webrtc"><img src="https://goreportcard.com/badge/github.com/pions/webrtc" alt="Go Report Card"></a>
+  <a href="https://travis-ci.org/tailvh/webrtc"><img src="https://travis-ci.org/tailvh/webrtc.svg?branch=master" alt="Build Status"></a>
+  <a href="https://godoc.org/github.com/tailvh/webrtc"><img src="https://godoc.org/github.com/tailvh/webrtc?status.svg" alt="GoDoc"></a>
+  <a href="https://coveralls.io/github/tailvh/webrtc"><img src="https://coveralls.io/repos/github/tailvh/webrtc/badge.svg" alt="Coverage Status"></a>
+  <a href="https://goreportcard.com/report/github.com/tailvh/webrtc"><img src="https://goreportcard.com/badge/github.com/tailvh/webrtc" alt="Go Report Card"></a>
   <a href="https://www.codacy.com/app/Sean-Der/webrtc"><img src="https://api.codacy.com/project/badge/Grade/18f4aec384894e6aac0b94effe51961d" alt="Codacy Badge"></a>
   <a href="LICENSE.md"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
 </p>
@@ -30,7 +30,7 @@ your platform:
 brew install openssl
 export CPATH=`brew --prefix`/opt/openssl/include
 export LIBRARY_PATH=`brew --prefix`/opt/openssl/lib
-go get -u github.com/pions/webrtc
+go get -u github.com/tailvh/webrtc
 ```
 #### Fedora
 `sudo yum install openssl-devel`
@@ -44,7 +44,7 @@ go get -u github.com/pions/webrtc
 ### Usage
 Check out the **[example applications](examples/README.md)** to help you along your Pion WebRTC journey.
 
-The Pion WebRTC API closely matches the JavaScript **[WebRTC API](https://w3c.github.io/webrtc-pc/)**. Most existing documentation is therefore also usefull when working with Pion. Furthermore, our **[GoDoc](https://godoc.org/github.com/pions/webrtc)** is actively maintained.
+The Pion WebRTC API closely matches the JavaScript **[WebRTC API](https://w3c.github.io/webrtc-pc/)**. Most existing documentation is therefore also usefull when working with Pion. Furthermore, our **[GoDoc](https://godoc.org/github.com/tailvh/webrtc)** is actively maintained.
 
 Now go forth and build some awesome apps! Here are some **ideas** to get your creative juices flowing:
 * Send a video file to multiple browser in real time for perfectly synchronized movie watching.
@@ -54,7 +54,7 @@ Now go forth and build some awesome apps! Here are some **ideas** to get your cr
 * Build a conferencing application that processes audio/video and make decisions off of it.
 
 ### Roadmap
-The library is in active development, please refer to the [roadmap](https://github.com/pions/webrtc/issues/9) to track our major milestones.
+The library is in active development, please refer to the [roadmap](https://github.com/tailvh/webrtc/issues/9) to track our major milestones.
 
 ### Community
 Pion has an active community on the [Golang Slack](https://invite.slack.golangbridge.org/). Sign up and join the **#pion** channel for discussions and support. You can also use [Pion mailing list](https://groups.google.com/forum/#!forum/pion).
@@ -69,7 +69,7 @@ If you need commercial support or don't want to use public methods you can conta
 * [WIP] [pions/dcnet](https://github.com/pions/dcnet): A package providing Golang [net](https://godoc.org/net) interfaces around Pion WebRTC data channels.
 
 ### Contributing
-Check out the **[contributing wiki](https://github.com/pions/webrtc/wiki/Contributing)** to join the group of amazing people making this project possible:
+Check out the **[contributing wiki](https://github.com/tailvh/webrtc/wiki/Contributing)** to join the group of amazing people making this project possible:
 
 * [John Bradley](https://github.com/kc5nra) - *Original Author*
 * [Michael Melvin Santry](https://github.com/santrym) - *Mascot*

@@ -3,9 +3,9 @@ package ice
 import (
 	"testing"
 
-	"github.com/pions/webrtc/pkg/rtcerr"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
+	"github.com/tailvh/webrtc/pkg/rtcerr"
 )
 
 func TestParseURL(t *testing.T) {

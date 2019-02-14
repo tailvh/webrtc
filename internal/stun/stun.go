@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/pions/pkg/stun"
-	"github.com/pions/webrtc/pkg/ice"
 	"github.com/pkg/errors"
+	"github.com/tailvh/webrtc/pkg/ice"
 )
 
 // TODO: This file doesn't make sense
